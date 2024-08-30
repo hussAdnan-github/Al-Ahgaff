@@ -1,4 +1,4 @@
-import React from 'react'
+ 
 import LinkNavbar from './LinkNavbar'
 
 export default function Navbar() {
