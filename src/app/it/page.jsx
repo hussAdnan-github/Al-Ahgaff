@@ -33,7 +33,7 @@ export default function page() {
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
     {
   students.map((item)=>(
-    <Card name={item.name} img={item.img}/>
+    <Card key={item.id} name={item.name} img={item.img}/>
   ))
 }
     </div>
