@@ -2,3 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+.main-img{
+    animation: scaleAnimation 1.5s infinite; /* Faster on small screens */
+
+}
+@keyframes scaleAnimation {
+    0%, 100% {
+      transform: scale(1); /* Original size */
+    }
+    50% {
+      transform: scale(1.2); /* Scaled up */
+    }
+  }
+
+  
+.container__me {
+  position : relative;
+ 
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  flex-warp : warp;
+  padding : 30px;  
+}
+
+.container__me .card {
+  position: relative;
+  max-width : 300px;
+  height : 215px;  
+ 
+  margin : 30px 10px;
+  padding : 20px 15px;
+  
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+}
+.container__me .card:hover {
+  height : 270px;    
+}
+
+
+.container__me .card .image {
+  position : relative;
+  width : 260px;
+  height : 260px;
+  
+  top : -40%;
+  left: 8px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+}
+
+.container__me .card .image img {
+  max-width : 100%;
+  border-radius : 15px;
+}
+
+.container__me .card .content {
+  position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : #111;
+  text-align : center;
+  
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.container__me .card:hover .content {
+   margin-top : 48px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+  
+}
