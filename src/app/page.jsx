@@ -1,22 +1,30 @@
-import Navbar from '@/components/Navbar'
+ 
 import React from 'react'
 import accout from "../../public/image/accout.jpeg";
+import Image from 'next/image';
 
 
 export default function page() {
-  const students = [
-    { id: 1, name: "حسين عدنان بلفقيه", img: accout },
-  ];
+ 
   return (
-   <>
     <div>
-
+    <div className='flex flex-col items-center justify-center'>
+    <Image className='main-img' src={accout} width={300}
+     height={300} alt='sdad'/>
     
-
-
-
-</div>
-
-   </>
+    <div>
+    <h1 className='text-3xl'>
+        adjosjdoasd
+        asdoasjdp[asojdaa
+        asjdasjdpsad
+        ajdpsajdsad
+        asdkps]
+    </h1>
+    </div>
+    
+    </div>
+    
+    
+        </div>
   )
 }

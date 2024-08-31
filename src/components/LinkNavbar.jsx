@@ -8,9 +8,9 @@ import Image from 'next/image';
 
 export default function LinkNavbar() {
   const navLinks = [
-    { id: 2, name: "الرعاة", hash: "#about" },
-    { id: 4, name: "محاسبة", hash: "#coupons" },
-    { id: 3, name: "تقنية معلومات", hash: "#offer" },
+    { id: 2, name: "الرعاة", url: "/company" },
+    { id: 4, name: "محاسبة", url: "/account" },
+    { id: 3, name: "تقنية معلومات", url: "/it" },
   
   ];
 
@@ -22,7 +22,7 @@ export default function LinkNavbar() {
         return (
           <Link
             key={link.id}
-            href={link.hash}
+            href={link.url}
             onClick={() => setactiveSection(link.name)}
           >
             <h1
@@ -39,8 +39,10 @@ export default function LinkNavbar() {
           </Link>
         );
       })}
-         <Image src={accout} width={100}
+        <Link href={'/'}>
+        <Image src={accout} width={100}
              height={100} alt='sdad'/>
+        </Link>
     </div>
   );
 }
